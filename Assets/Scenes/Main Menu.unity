@@ -481,7 +481,7 @@ GameObject:
   - component: {fileID: 329789438}
   - component: {fileID: 329789437}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: MainScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -749,6 +749,7 @@ GameObject:
   - component: {fileID: 460612622}
   - component: {fileID: 460612621}
   - component: {fileID: 460612620}
+  - component: {fileID: 460612623}
   m_Layer: 5
   m_Name: Dropdown
   m_TagString: Untagged
@@ -823,11 +824,7 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Option A
-      m_Image: {fileID: 0}
-    - m_Text: Option B
-      m_Image: {fileID: 0}
-    - m_Text: Option C
+    - m_Text: Pazienti
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -871,6 +868,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 460612618}
   m_CullTransparentMesh: 0
+--- !u!114 &460612623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460612618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6383296ac74dabc49acac367d4674105, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patDrop: {fileID: 460612620}
 --- !u!1 &473431920
 GameObject:
   m_ObjectHideFlags: 0
@@ -2003,7 +2013,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Option A
+  m_text: Pazienti
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2074,8 +2084,8 @@ MonoBehaviour:
     textComponent: {fileID: 1662384572}
     characterCount: 8
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 2
+    spaceCount: 0
+    wordCount: 1
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -2118,6 +2128,7 @@ GameObject:
   - component: {fileID: 1697028460}
   - component: {fileID: 1697028459}
   - component: {fileID: 1697028458}
+  - component: {fileID: 1697028461}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -2184,7 +2195,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1697028459}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1697028461}
+        m_MethodName: UISpawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1697028459
@@ -2224,6 +2246,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1697028456}
   m_CullTransparentMesh: 0
+--- !u!114 &1697028461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697028456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 110cc1a90ce930043814a0ce5b1624b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UI: {fileID: 6994848110253921820, guid: 2e2d391990c15c44788b0a64d16c2bd5, type: 3}
 --- !u!1 &1734080592
 GameObject:
   m_ObjectHideFlags: 0

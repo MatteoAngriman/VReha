@@ -366,6 +366,10 @@
     <Compile Include="Assets\Oculus\VoiceMod\Scripts\OVRVoiceMod.cs" />
     <Compile Include="Assets\Oculus\VoiceMod\Scripts\OVRVoiceModContext.cs" />
     <Compile Include="Assets\OverlayDemo\Scripts\KinectOverlayer.cs" />
+    <Compile Include="Assets\Scripts\CreatePatientAsset.cs" />
+    <Compile Include="Assets\Scripts\GetPatientNames.cs" />
+    <Compile Include="Assets\Scripts\Patient.cs" />
+    <Compile Include="Assets\Scripts\SpawnUI.cs" />
     <None Include="Assets\Oculus\Avatar\Content\Materials\AvatarMaterialStateShader.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Oculus\Avatar\Samples\CrossPlatform\Readme.txt" />
