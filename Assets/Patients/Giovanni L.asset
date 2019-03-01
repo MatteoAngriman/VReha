@@ -15,4 +15,6 @@ MonoBehaviour:
   patName: Giovanni L
   patAge: 19
   patSex: 109
-  patScore: 
+  patScore:
+  - gameID: 0
+    gameScore: 0
