@@ -10,7 +10,7 @@ public class SceneData : ScriptableObject
     public int patientID;
     public float speed;
     public bool isLeftHanded;
-
+    public bool isSitting;
 
 
 }

@@ -13,16 +13,6 @@ MonoBehaviour:
   m_Name: Gabriele O
   m_EditorClassIdentifier: 
   patName: Gabriele O
-  patAge: 23
-  patSex: 102
-  patScore:
-  - gameID: 0
-    gameScore: 0
-  - gameID: 0
-    gameScore: 0
-  - gameID: 0
-    gameScore: 0
-  - gameID: 0
-    gameScore: 0
-  - gameID: 0
-    gameScore: 0
+  patAge: 2
+  patSex: 109
+  patScore: []
