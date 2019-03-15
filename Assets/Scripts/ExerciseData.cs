@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,4 +12,8 @@ public class ExerciseData : ScriptableObject
     public bool isSpeedMod, isSittingMod, isSitting;
     public int speed;
 
+    public static explicit operator ExerciseData(AssetBundle v)
+    {
+        throw new NotImplementedException();
+    }
 }

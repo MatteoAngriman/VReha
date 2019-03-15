@@ -33,8 +33,9 @@ public class GetPatientNames : MonoBehaviour
 
     private string[] getPatientNames()
     {
-        string path = Application.dataPath + "/Patients";
-        string[] patNames = Directory.GetFiles(@path, "*.asset");
+
+        string path = Application.persistentDataPath + "/Pazienti"; /*Application.dataPath + "/Patients";*/
+        string[] patNames = Directory.GetFiles(@path, "*.json");
         foreach(string pat in patNames)
         {
             Debug.Log(pat);

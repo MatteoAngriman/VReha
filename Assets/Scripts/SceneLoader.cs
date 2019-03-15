@@ -18,6 +18,7 @@ public class SceneLoader : MonoBehaviour
     public void SetSceneID(int id)
     {
         sceneID = id;
+        Debug.Log("Loaded scene " + sceneID);
     }
 
     public void LoadScene()
@@ -25,7 +26,7 @@ public class SceneLoader : MonoBehaviour
         //Function that loads the scene given its ID
         if (sceneID > 0)
         {
-            SceneManager.LoadScene("sc_" + sceneID);
+            SceneManager.LoadScene(sceneID);
         }
 
     }

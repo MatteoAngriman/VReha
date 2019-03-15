@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
+using System.IO;
+//using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -26,7 +27,11 @@ public class CreatePatientAsset : MonoBehaviour
         Debug.Log("patient age: " + pat.patAge);
         pat.patSex = sex;
         Debug.Log("patient name: " + pat.patSex);
-        AssetDatabase.CreateAsset(pat, "Assets/Patients/" + pName.text + ".asset");
+        var JSONString = JsonUtility.ToJson(pat);
+        File.WriteAllText(Application.persistentDataPath +"/Pazienti/"+ pName.text+".json", JSONString);
+        
+        //ONLY FOR UNITYEDITOR
+        //UnityEditor.AssetDatabase.CreateAsset(pat, "Assets/Patients/" + pName.text + ".asset");
     }
 
 }

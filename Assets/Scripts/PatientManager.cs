@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
+using System.IO;
+//using UnityEditor;
 using UnityEngine;
 
 public class PatientManager : MonoBehaviour
@@ -19,8 +20,12 @@ public class PatientManager : MonoBehaviour
     // Load Patient from name
     public void LoadPatientWithName(string name)
     {
+
+        patient = JsonUtility.FromJson<Patient>(Application.persistentDataPath + "/Pazienti/" + name + ".json");
         Debug.Log("Name to Load:" + name);
-        patient = (Patient)AssetDatabase.LoadAssetAtPath("Assets/Patients/" + name + ".asset", typeof(Patient));
+        
+        //ONLY FOR UNITYEDITOR
+        //patient = (Patient)UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Patients/" + name + ".asset", typeof(Patient));
         Debug.Log("Patient loaded: " + patient.patName);
     }
 
@@ -28,13 +33,19 @@ public class PatientManager : MonoBehaviour
     public void LoadPatient()
     {
         Debug.Log("Name to Load:" + patientName);
-        patient = (Patient)AssetDatabase.LoadAssetAtPath("Assets/Patients/"+patientName+".asset", typeof(Patient));
+        patient = JsonUtility.FromJson<Patient>(Application.persistentDataPath + "/Pazienti/" + patientName + ".json");
+        ////ONLY FOR UNITYEDITOR
+        //patient = (Patient)UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Patients/"+patientName+".asset", typeof(Patient));
         Debug.Log("Patient loaded: " + patient.patName);
     }
 
     public void DeletePatient()
     {
-        AssetDatabase.DeleteAsset("Assets/Patients/" + patientName + ".asset");
+
+        File.Delete(Application.persistentDataPath + "/Pazienti/" + patientName + ".json");
+
+        //ONLY FOR UNITYEDITOR
+        //UnityEditor.AssetDatabase.DeleteAsset("Assets/Patients/" + patientName + ".asset");
         Debug.Log("Paziente " + patientName + " obliterato");
     }
 

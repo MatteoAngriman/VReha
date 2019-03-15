@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
+//using UnityEditor;
 using UnityEngine;
 
 public class SetExerciseData : MonoBehaviour
@@ -12,7 +12,12 @@ public class SetExerciseData : MonoBehaviour
 
     public void ExerciseDataLoader(int id)
     {
-        exData = (ExerciseData)AssetDatabase.LoadAssetAtPath("Assets/ExerciseData/Ex" + id + ".asset", typeof(ExerciseData));
+
+        var res = Resources.Load<ExerciseData>("ExerciseData/Ex" + id + ".asset");
+        //var bundle = AssetBundle.LoadFromFile("Assets/ExerciseData/Ex" + id + ".asset");
+        exData = res;
+        //exData = JsonUtility.FromJson<ExerciseData>();
+        //exData = (ExerciseData)UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/ExerciseData/Ex" + id + ".asset", typeof(ExerciseData));
         Debug.Log("Exercise Data for Ex" + id + " are loaded");
     }
     public void SetSpeed(int sp)
