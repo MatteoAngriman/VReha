@@ -8,5 +8,7 @@ public class ExerciseData : ScriptableObject
     public int exerciseID;
     public GameObject prefabToLoad;
     public float timeLimit;
-    public bool isSpeedMod, isSittingMod, isSittingForced;
+    public bool isSpeedMod, isSittingMod, isSitting;
+    public int speed;
+
 }
