@@ -370,10 +370,12 @@
     <Compile Include="Assets\Scripts\DontDestroyOnLoadScript.cs" />
     <Compile Include="Assets\Scripts\ExerciseData.cs" />
     <Compile Include="Assets\Scripts\GetPatientNames.cs" />
+    <Compile Include="Assets\Scripts\Misc\MeshFlipper.cs" />
     <Compile Include="Assets\Scripts\Patient.cs" />
     <Compile Include="Assets\Scripts\PatientManager.cs" />
     <Compile Include="Assets\Scripts\Sc_2\ButtonActivatorScript.cs" />
     <Compile Include="Assets\Scripts\Sc_2\ButtonHandChecker.cs" />
+    <Compile Include="Assets\Scripts\Sc_2\ButtonManager.cs" />
     <Compile Include="Assets\Scripts\SceneData.cs" />
     <Compile Include="Assets\Scripts\SceneLoader.cs" />
     <Compile Include="Assets\Scripts\SetExerciseData.cs" />
