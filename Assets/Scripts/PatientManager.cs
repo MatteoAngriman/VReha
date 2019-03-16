@@ -53,6 +53,7 @@ public class PatientManager : MonoBehaviour
     {
         patient.patScore.Add(new Score(gameID, gameScore));
         patient.patScore.Sort();
+        UpdatePatientJSON();
     }
 
     public void GetScores (int gameID)
@@ -64,5 +65,11 @@ public class PatientManager : MonoBehaviour
                 Debug.Log("Score in game " + gameID + " is " + sc.gameScore);
             };
         }
+    }
+
+    public void UpdatePatientJSON()
+    {
+        var JSONString = JsonUtility.ToJson(patient);
+        File.WriteAllText(Application.persistentDataPath + "/Pazienti/" + patient.name + ".json", JSONString);
     }
 }
