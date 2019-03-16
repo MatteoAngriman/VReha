@@ -26,7 +26,7 @@ public class CreatePatientAsset : MonoBehaviour
         pat.patAge = age.text;
         Debug.Log("patient age: " + pat.patAge);
         pat.patSex = sex;
-        Debug.Log("patient sex: " + pat.patSex);
+        Debug.Log("patient name: " + pat.patSex);
         var JSONString = JsonUtility.ToJson(pat);
         File.WriteAllText(Application.persistentDataPath +"/Pazienti/"+ pName.text+".json", JSONString);
         
