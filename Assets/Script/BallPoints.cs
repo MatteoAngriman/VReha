@@ -25,4 +25,12 @@ public class BallPoints : MonoBehaviour
             Debug.Log("Il tuo punteggio è: " + Dodge.points);
         }
     }
+
+    private void Update()
+    {
+        float t = 0;
+        t += Time.deltaTime;
+        if (t > 3.0f)
+            Destroy(this.gameObject);
+    }
 }

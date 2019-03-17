@@ -14,7 +14,6 @@ public class PatientManager : MonoBehaviour
     public void GetDropdownValue()
     {
         patientName = drop.options[drop.value].text;
-        Debug.Log(drop.value);
         Debug.Log("Name to load: " + patientName);
     }
 
@@ -42,8 +41,7 @@ public class PatientManager : MonoBehaviour
 
     public void DeletePatient()
     {
-        var patThoDelete = Application.persistentDataPath + "/Pazienti";
-        Debug.Log(patThoDelete);
+
         File.Delete(Application.persistentDataPath + "/Pazienti/" + patientName + ".json");
 
         //ONLY FOR UNITYEDITOR
@@ -65,7 +63,7 @@ public class PatientManager : MonoBehaviour
             if (sc.gameID == gameID)
                 {
                 Debug.Log("Score in game " + gameID + " is " + sc.gameScore);
-            };
+            }
         }
     }
 

@@ -91,8 +91,8 @@ MonoBehaviour:
     y: 0
     width: 560
     height: 947
-  m_MinSize: {x: 277, y: 74}
-  m_MaxSize: {x: 4002, y: 4024}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -117,8 +117,8 @@ MonoBehaviour:
     y: 0
     width: 404
     height: 598
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 224}
+  m_MaxSize: {x: 4002, y: 4024}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -387,20 +387,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\matte\Documents\Unity Projects\VReha
+  m_LastProjectPath: C:\Users\Simone\Documents\GitHub\VReha
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 268e0000
-    m_LastClickedID: 36390
-    m_ExpandedIDs: 00000000268e0000808e0000f08e0000728f00004a900000dc9000003691000076910000c8910000da9100000692000012920000289200000a93000000ca9a3b
+    scrollPos: {x: 0, y: 152}
+    m_SelectedIDs: f88d0000
+    m_LastClickedID: 36344
+    m_ExpandedIDs: 00000000868d0000e48d0000568e0000e28e0000ba8f000050900000a6900000e69000003a9100004c91000078910000849100009a9100008c92000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -428,7 +428,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000268e0000808e0000f08e0000728f00004a900000dc9000003691000076910000c8910000da9100000692000012920000289200000a930000
+    m_ExpandedIDs: 00000000868d0000e48d0000568e0000e28e0000ba8f000050900000a6900000e69000003a9100004c91000078910000849100009a9100008c920000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -510,9 +510,9 @@ MonoBehaviour:
     height: 927
   m_PersistentViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
-  m_InstanceIDsLockedBeforeSerialization: 5698feff
+  m_InstanceIDsLockedBeforeSerialization: 
   m_LockTracker:
-    m_IsLocked: 1
+    m_IsLocked: 0
   m_PreviewResizer:
     m_CachedPref: 160
     m_ControlHash: -371814159
@@ -549,7 +549,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: c898fefffa9dfeffa69ffeffbc9ffeffc69ffeffd09ffeffd29ffeffe6c8feff20c9feffa2d7feffe0e3feffbaf1feffd8f1feff7ef5fefff2f5feff0cf6feffb8fcfefff2fdfeff12fefeffb801ffff2c02ffff4602fffff628ffff1c2affff8c41ffff9c41ffff9e42ffff3647ffff5c47ffffbe51ffffd251fffff851ffff5653ffff6653ffff8c53ffffc253ffffd05bffffa05dffffb49c0000da9c000028d9000006dc0000c8e6000082e7000006e8000018ea000060ea000094ea0000
+      m_ExpandedIDs: 5c52ffff0455fffffe55ffffa25bffff165dffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -605,9 +605,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.105246365, y: 9.356083, z: -3.7772074}
+    m_Target: {x: 5.776038, y: 9.451061, z: -10.169265}
     speed: 2
-    m_Value: {x: 0.105246365, y: 9.356083, z: -3.7772074}
+    m_Value: {x: 5.776038, y: 9.451061, z: -10.169265}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -635,13 +635,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.03327192, y: 0.043140415, z: -0.0014370123, w: 0.9985139}
+    m_Target: {x: 0.11024605, y: 0.29750353, z: -0.034609966, w: 0.94770795}
     speed: 2
-    m_Value: {x: 0.03327192, y: 0.043140415, z: -0.0014370123, w: 0.9985139}
+    m_Value: {x: 0.11024546, y: 0.29750192, z: -0.03460978, w: 0.9477029}
   m_Size:
-    m_Target: 24.393314
+    m_Target: 11.1608
     speed: 2
-    m_Value: 24.393314
+    m_Value: 11.1608
   m_Ortho:
     m_Target: 0
     speed: 2

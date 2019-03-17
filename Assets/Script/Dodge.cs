@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
+using UnityEngine.SceneManagement;
 
 public class Dodge : MonoBehaviour
 {
     public GameObject player;
     public GameObject[] proiettili = new GameObject[3];
+    public PatientManager pat;
     public Transform playerPos;
     public Rigidbody rb;
     [Range(0f,10f)]
@@ -23,14 +24,15 @@ public class Dodge : MonoBehaviour
         player = GameObject.Find("Player");     //searching for the Player
         Debug.Log("Found the player");
         playerPos = player.transform;  //aiming to the player
-        /*
-        proiettili[1] = (GameObject)Resources.Load("Resources/altraPalla");
-        proiettili[2] = (GameObject)Resources.Load("Resources/Palla");
-        proiettili[3] = (GameObject)Resources.Load("Resources/cubo");
-        */
-    }
+        pat = GameObject.FindObjectOfType(typeof(PatientManager)) as PatientManager;
+    /*
+    proiettili[1] = (GameObject)Resources.Load("Resources/altraPalla");
+    proiettili[2] = (GameObject)Resources.Load("Resources/Palla");
+    proiettili[3] = (GameObject)Resources.Load("Resources/cubo");
+    */
+}
 
-    void Shoot()
+    private void Shoot()
     {
        Debug.Log ("BANG");
         //Debug.Log(playerPos);
@@ -52,6 +54,7 @@ public class Dodge : MonoBehaviour
         {
             this.transform.LookAt(playerPos);
         }
+
             
     }
 
@@ -63,6 +66,20 @@ public class Dodge : MonoBehaviour
             Shoot();
             timer = 0f;
         }
-            
+        if (ballShooted == maxBalls && timer > 5.0f)
+        {
+            Debug.Log("FINE");
+            /*
+            if(pat != null)
+                pat.AddScore(1, points);
+            */
+            Debug.Log(SceneManager.GetActiveScene().buildIndex);
+            ReturnMainMenu();
+        }
+    }
+
+    void ReturnMainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }
