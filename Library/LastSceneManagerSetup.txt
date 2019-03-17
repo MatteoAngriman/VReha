@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/PulsantieraTest.unity
+- path: Assets/Scenes/sc_1.unity
   isLoaded: 1
   isActive: 1
