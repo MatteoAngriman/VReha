@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ButtonHandChecker : MonoBehaviour
 {
-
+    public GameObject man;
+    public ButtonManager butt;
     public bool isLeftHand, isRightHand, exit;
     // Start is called before the first frame update
     void Start()
@@ -12,7 +13,9 @@ public class ButtonHandChecker : MonoBehaviour
         //shouldn't be needed
         isLeftHand = false;
         isRightHand = false;
-        exit = false;
+        man = GameObject.Find("HulaHop");
+        var b = GameObject.Find("HulaHop");
+        butt = b.GetComponent<ButtonManager>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -30,10 +33,16 @@ public class ButtonHandChecker : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        //Resets bool values
-        isLeftHand = false;
-        isRightHand = false;
+
         Debug.Log("Hand exited");
-        exit = true;
+        var van = man.GetComponent<ButtonManager>();
+        if ((isLeftHand && butt.hand == 0) || (isRightHand && butt.hand == 1))
+        {
+            van.Reset();
+            van.ChooseNextButton(Random.Range(0, 8), Random.Range(0, 2));
+            //Resets bool values
+            isLeftHand = false;
+            isRightHand = false;
+        }
     }
 }

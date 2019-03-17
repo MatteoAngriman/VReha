@@ -105,8 +105,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonHandChecker: {fileID: 2046098379}
-  patManager: {fileID: 0}
-  score: 0
+  butt: {fileID: 0}
+  checker: {fileID: 2046098379}
+  deactivated: 1
 --- !u!1 &1938146267
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,8 +304,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 982131a08d901a243b5cc601959fb91c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  man: {fileID: 0}
   isLeftHand: 0
   isRightHand: 0
+  exit: 0
 --- !u!64 &5286349862546195911
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -399,7 +402,7 @@ SpringJoint:
   m_ConnectedAnchor: {x: 0, y: 0.018, z: 0}
   serializedVersion: 2
   m_Spring: 20
-  m_Damper: 20
+  m_Damper: 0.3
   m_MinDistance: 0
   m_MaxDistance: 0
   m_Tolerance: 0.000005
@@ -451,7 +454,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 6a991837b8950bc42ad29f500b42fa01, type: 3}
       propertyPath: m_Name
-      value: Pulsante 1
+      value: Pulsante 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6a991837b8950bc42ad29f500b42fa01, type: 3}
+      propertyPath: m_TagString
+      value: pulsante
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6a991837b8950bc42ad29f500b42fa01, type: 3}
       propertyPath: m_LocalPosition.x
@@ -500,7 +507,7 @@ PrefabInstance:
     - target: {fileID: 2300000, guid: 6a991837b8950bc42ad29f500b42fa01, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 723a4d0c071cf9248ad841e1e5692f54, type: 2}
+      objectReference: {fileID: 2100000, guid: 179459987fa77304f8da0daf6b0f19a1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a991837b8950bc42ad29f500b42fa01, type: 3}
 --- !u!1 &376261218627328043 stripped
