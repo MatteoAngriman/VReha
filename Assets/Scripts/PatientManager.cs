@@ -54,7 +54,7 @@ public class PatientManager : MonoBehaviour
     public void AddScore(int gameID, int gameScore)
     {
         patient.patScore.Add(new Score(gameID, gameScore));
-        patient.patScore.Sort();
+        //patient.patScore.Sort();
         UpdatePatientJSON();
     }
 

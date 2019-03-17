@@ -64,15 +64,15 @@ public class Dodge : MonoBehaviour
         if (ballShooted == maxBalls && timer > 5.0f)
         {
             Debug.Log("FINE");
-            if(pat != null)
-                pat.AddScore(1, points);
-            Debug.Log(SceneManager.GetActiveScene().buildIndex);
+            Debug.Log(pat.patientName);
+            pat.AddScore(1, points);
             ReturnMainMenu();
         }
     }
 
     void ReturnMainMenu()
     {
+        Debug.Log("return to 0main menu");
         SceneManager.LoadScene(0);
     }
 }
