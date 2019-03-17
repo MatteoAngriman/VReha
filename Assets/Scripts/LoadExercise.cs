@@ -10,6 +10,7 @@ public class LoadExercise : MonoBehaviour
     private void Start()
     {
         sceneManager = GameObject.FindGameObjectWithTag("SceneManager");
+        StartExercise();
     }
     public void StartExercise()
     {
