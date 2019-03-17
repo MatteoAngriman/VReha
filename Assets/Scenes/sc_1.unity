@@ -187,7 +187,7 @@ PrefabInstance:
     - target: {fileID: 8629817480207475983, guid: 5ac9b0aefea2d3b48b5a1314a5bf6e81,
         type: 3}
       propertyPath: maxBalls
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8158183346328429591, guid: 5ac9b0aefea2d3b48b5a1314a5bf6e81, type: 3}

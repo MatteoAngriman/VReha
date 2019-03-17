@@ -25,12 +25,7 @@ public class Dodge : MonoBehaviour
         Debug.Log("Found the player");
         playerPos = player.transform;  //aiming to the player
         pat = GameObject.FindObjectOfType(typeof(PatientManager)) as PatientManager;
-    /*
-    proiettili[1] = (GameObject)Resources.Load("Resources/altraPalla");
-    proiettili[2] = (GameObject)Resources.Load("Resources/Palla");
-    proiettili[3] = (GameObject)Resources.Load("Resources/cubo");
-    */
-}
+    }
 
     private void Shoot()
     {
@@ -69,10 +64,8 @@ public class Dodge : MonoBehaviour
         if (ballShooted == maxBalls && timer > 5.0f)
         {
             Debug.Log("FINE");
-            /*
             if(pat != null)
                 pat.AddScore(1, points);
-            */
             Debug.Log(SceneManager.GetActiveScene().buildIndex);
             ReturnMainMenu();
         }

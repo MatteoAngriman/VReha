@@ -280,7 +280,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UI: {fileID: 2000594335}
   toActivate: {fileID: 2000594338}
-  confirmWindow: {fileID: 0}
 --- !u!1 &148238087
 GameObject:
   m_ObjectHideFlags: 0
@@ -747,7 +746,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UI: {fileID: 441435426}
   toActivate: {fileID: 441435429}
-  confirmWindow: {fileID: 0}
 --- !u!1 &360257510
 GameObject:
   m_ObjectHideFlags: 0
@@ -1043,11 +1041,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -1307,6 +1305,7 @@ GameObject:
   m_Component:
   - component: {fileID: 795805722}
   - component: {fileID: 795805723}
+  - component: {fileID: 795805724}
   m_Layer: 0
   m_Name: PatientManager
   m_TagString: Untagged
@@ -1340,9 +1339,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b5625624d6d43344915963d55c97122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patient: {fileID: 0}
+  patient:
+    patName: 
+    patAge: 
+    patSex: 0
+    patScore: []
   patientName: 
   drop: {fileID: 314716018}
+--- !u!114 &795805724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795805721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f03ca6bbe7e3419429ad7b9585e09da6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1078342164
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1355,6 +1370,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: NewPatientUI
       objectReference: {fileID: 0}
+    - target: {fileID: 8768427423153169096, guid: 4dc453ce2192fc84f84bf647358a80c2,
+        type: 3}
+      propertyPath: confirmWindow
+      value: 
+      objectReference: {fileID: 1926213581}
     - target: {fileID: 1352189087802370694, guid: 4dc453ce2192fc84f84bf647358a80c2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1549,11 +1569,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: UpdateDropdownList
       objectReference: {fileID: 0}
-    - target: {fileID: 8768427423153169096, guid: 4dc453ce2192fc84f84bf647358a80c2,
-        type: 3}
-      propertyPath: confirmWindow
-      value: 
-      objectReference: {fileID: 1926213581}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dc453ce2192fc84f84bf647358a80c2, type: 3}
 --- !u!1 &1092643616 stripped
@@ -1576,7 +1591,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UI: {fileID: 0}
   toActivate: {fileID: 0}
-  confirmWindow: {fileID: 1926213581}
 --- !u!114 &1092643619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2315,11 +2329,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -2475,11 +2489,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -3090,6 +3104,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Paziente Eliminato
       objectReference: {fileID: 0}
+    - target: {fileID: 5968587732629202325, guid: 100a4aa248516294297b179d9a5e9a02,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968587732629202325, guid: 100a4aa248516294297b179d9a5e9a02,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7627848593233888392, guid: 100a4aa248516294297b179d9a5e9a02,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3193,16 +3217,6 @@ PrefabInstance:
     - target: {fileID: 7627848593233888392, guid: 100a4aa248516294297b179d9a5e9a02,
         type: 3}
       propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5968587732629202325, guid: 100a4aa248516294297b179d9a5e9a02,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5968587732629202325, guid: 100a4aa248516294297b179d9a5e9a02,
-        type: 3}
-      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5560853055173497333, guid: 100a4aa248516294297b179d9a5e9a02,
@@ -3331,7 +3345,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UI: {fileID: 0}
   toActivate: {fileID: 0}
-  confirmWindow: {fileID: 1787767145}
 --- !u!114 &1991858237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3634,16 +3647,16 @@ PrefabInstance:
       propertyPath: toActivate
       value: 
       objectReference: {fileID: 2000594338}
-    - target: {fileID: 4583099622403173489, guid: 9019bcd80bc9b544485bdd9cf1ffc9f1,
+    - target: {fileID: 2291952141743191832, guid: 9019bcd80bc9b544485bdd9cf1ffc9f1,
         type: 3}
-      propertyPath: UI
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2000594335}
-    - target: {fileID: 4583099622403173489, guid: 9019bcd80bc9b544485bdd9cf1ffc9f1,
+      objectReference: {fileID: 795805723}
+    - target: {fileID: 2291952141382475877, guid: 9019bcd80bc9b544485bdd9cf1ffc9f1,
         type: 3}
-      propertyPath: toActivate
-      value: 
-      objectReference: {fileID: 2000594338}
+      propertyPath: m_Name
+      value: Ex_2Button
+      objectReference: {fileID: 0}
     - target: {fileID: 2291952141865067284, guid: 9019bcd80bc9b544485bdd9cf1ffc9f1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3749,6 +3762,26 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2291952141292096134, guid: 9019bcd80bc9b544485bdd9cf1ffc9f1,
+        type: 3}
+      propertyPath: toActivate
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2291952141292096134, guid: 9019bcd80bc9b544485bdd9cf1ffc9f1,
+        type: 3}
+      propertyPath: confirmWindow
+      value: 
+      objectReference: {fileID: 1787767145}
+    - target: {fileID: 4583099622403173489, guid: 9019bcd80bc9b544485bdd9cf1ffc9f1,
+        type: 3}
+      propertyPath: UI
+      value: 
+      objectReference: {fileID: 2000594335}
+    - target: {fileID: 4583099622403173489, guid: 9019bcd80bc9b544485bdd9cf1ffc9f1,
+        type: 3}
+      propertyPath: toActivate
+      value: 
+      objectReference: {fileID: 2000594338}
     - target: {fileID: 2291952140565777017, guid: 9019bcd80bc9b544485bdd9cf1ffc9f1,
         type: 3}
       propertyPath: toActivate
@@ -3789,21 +3822,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 2291952141292096134, guid: 9019bcd80bc9b544485bdd9cf1ffc9f1,
-        type: 3}
-      propertyPath: toActivate
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2291952141292096134, guid: 9019bcd80bc9b544485bdd9cf1ffc9f1,
-        type: 3}
-      propertyPath: confirmWindow
-      value: 
-      objectReference: {fileID: 1787767145}
-    - target: {fileID: 2291952141743191832, guid: 9019bcd80bc9b544485bdd9cf1ffc9f1,
-        type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 795805723}
     - target: {fileID: 2291952141789555814, guid: 9019bcd80bc9b544485bdd9cf1ffc9f1,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -3988,11 +4006,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ex_1Button
-      objectReference: {fileID: 0}
-    - target: {fileID: 2291952141382475877, guid: 9019bcd80bc9b544485bdd9cf1ffc9f1,
-        type: 3}
-      propertyPath: m_Name
-      value: Ex_2Button
       objectReference: {fileID: 0}
     - target: {fileID: 2291952141382475879, guid: 9019bcd80bc9b544485bdd9cf1ffc9f1,
         type: 3}

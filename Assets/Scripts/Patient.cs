@@ -2,9 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-[CreateAssetMenu(fileName = "Patient")]
-public class Patient : ScriptableObject
+[System.Serializable]
+//[CreateAssetMenu(fileName = "Patient")]
+public class Patient
 {
     public string patName;
     public string patAge;

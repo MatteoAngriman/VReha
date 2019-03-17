@@ -20,13 +20,7 @@ public class CreatePatientAsset : MonoBehaviour
         {
             sex = 'f';
         } else sex = 'm';
-        Patient pat = ScriptableObject.CreateInstance<Patient>();
-        pat.patName = pName.text;
-        Debug.Log("patient name: " + pat.patName);
-        pat.patAge = age.text;
-        Debug.Log("patient age: " + pat.patAge);
-        pat.patSex = sex;
-        Debug.Log("patient name: " + pat.patSex);
+        Patient pat = new Patient(pName.text, age.text, sex);
         var JSONString = JsonUtility.ToJson(pat);
         File.WriteAllText(Application.persistentDataPath +"/Pazienti/"+ pName.text+".json", JSONString);
         

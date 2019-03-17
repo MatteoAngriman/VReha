@@ -15,13 +15,15 @@ public class PatientManager : MonoBehaviour
     {
         patientName = drop.options[drop.value].text;
         Debug.Log("Name to load: " + patientName);
+        LoadPatientWithName(patientName);
     }
 
     // Load Patient from name
     public void LoadPatientWithName(string name)
     {
-
-        patient = JsonUtility.FromJson<Patient>(Application.persistentDataPath + "/Pazienti/" + name + ".json");
+        var pathPat = File.ReadAllText(Application.persistentDataPath + "/Pazienti/" + name + ".json");
+        Debug.Log(pathPat);
+        patient = JsonUtility.FromJson<Patient>(pathPat);
         Debug.Log("Name to Load:" + name);
         
         //ONLY FOR UNITYEDITOR
@@ -70,6 +72,6 @@ public class PatientManager : MonoBehaviour
     public void UpdatePatientJSON()
     {
         var JSONString = JsonUtility.ToJson(patient);
-        File.WriteAllText(Application.persistentDataPath + "/Pazienti/" + patient.name + ".json", JSONString);
+        File.WriteAllText(Application.persistentDataPath + "/Pazienti/" + patient.patName + ".json", JSONString);
     }
 }
