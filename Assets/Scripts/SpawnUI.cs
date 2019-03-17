@@ -6,6 +6,7 @@ public class SpawnUI : MonoBehaviour
 {
     public GameObject UI;
     public Canvas toActivate;
+    public Canvas confirmWindow;
 public void UISpawn()
     {
         Instantiate(UI);
@@ -23,5 +24,15 @@ public void CanvasDeactivator()
     {
         var canvas = transform.parent.gameObject;
         Destroy(canvas);
+    }
+
+    public void OpenConfirmWindow()
+    {
+        confirmWindow.enabled = true;
+    }
+
+    public void CloseConfirmWindow()
+    {
+        confirmWindow.enabled = false;
     }
 }

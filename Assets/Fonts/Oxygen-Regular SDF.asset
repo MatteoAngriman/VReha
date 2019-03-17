@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Oxygen-Regular SDF
   m_EditorClassIdentifier: 
   hashCode: -1176372924
-  material: {fileID: 21081721798054224}
+  material: {fileID: 21085810198739972}
   materialHashCode: 1741948239
   fontAssetType: 1
   m_fontInfo:
@@ -38,7 +38,7 @@ MonoBehaviour:
     Padding: 5
     AtlasWidth: 512
     AtlasHeight: 512
-  atlas: {fileID: 28461528826181940}
+  atlas: {fileID: 28804564418694484}
   m_glyphInfoList:
   - id: 32
     x: 6
@@ -974,7 +974,7 @@ MonoBehaviour:
   boldSpacing: 7
   italicStyle: 35
   tabSize: 10
---- !u!21 &21081721798054224
+--- !u!21 &21085810198739972
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -1006,7 +1006,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 28461528826181940}
+        m_Texture: {fileID: 28804564418694484}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OutlineTex:
@@ -1074,7 +1074,7 @@ Material:
     - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _UnderlayColor: {r: 0, g: 0, b: 0, a: 0.5}
---- !u!28 &28461528826181940
+--- !u!28 &28804564418694484
 Texture2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
