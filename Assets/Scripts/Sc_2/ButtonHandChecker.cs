@@ -13,8 +13,8 @@ public class ButtonHandChecker : MonoBehaviour
         //shouldn't be needed
         isLeftHand = false;
         isRightHand = false;
-        man = GameObject.Find("HulaHop");
-        var b = GameObject.Find("HulaHop");
+        man = GameObject.Find("halfHola(Clone)");
+        var b = GameObject.Find("halfHola(Clone)");
         butt = b.GetComponent<ButtonManager>();
     }
 
@@ -39,7 +39,7 @@ public class ButtonHandChecker : MonoBehaviour
         if ((isLeftHand && butt.hand == 0) || (isRightHand && butt.hand == 1))
         {
             van.Reset();
-            van.ChooseNextButton(Random.Range(0, 8), Random.Range(0, 2));
+            van.ChooseNextButton(Random.Range(0, van.pulsanti.Length), Random.Range(0, 2));
             //Resets bool values
             isLeftHand = false;
             isRightHand = false;

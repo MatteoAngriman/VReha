@@ -35,7 +35,7 @@ public class ButtonActivatorScript : MonoBehaviour
 
     private void Start()
     {
-        var b = GameObject.Find("HulaHop");
+        var b = GameObject.Find("halfHola(Clone)");
         butt = b.GetComponent<ButtonManager>();
     }
 }

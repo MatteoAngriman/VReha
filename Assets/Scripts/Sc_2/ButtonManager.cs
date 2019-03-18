@@ -20,7 +20,7 @@ public class ButtonManager : MonoBehaviour
     private void Start()
     {
 
-        ChooseNextButton(Random.Range(0, 8), Random.Range(0, 2));
+        ChooseNextButton(Random.Range(0, pulsanti.Length), Random.Range(0, 2));
         /*
         for (int i = 0; i < 8; i++)
         {
@@ -41,7 +41,7 @@ public class ButtonManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             Reset();
-            ChooseNextButton(Random.Range(0, 8),Random.Range(0, 2));
+            ChooseNextButton(Random.Range(0, pulsanti.Length),Random.Range(0, 2));
         }
         
     }
@@ -78,7 +78,7 @@ public class ButtonManager : MonoBehaviour
         */
             if(activatorscript.deactivated)
             {
-                Debug.Log("DEACTIVATED DIO BUBI");
+                Debug.Log("DEACTIVATED");
                 button = bottoni[i];
                 hand = lr;
                 if (hand == 0)

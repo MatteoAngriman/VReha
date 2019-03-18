@@ -608,12 +608,12 @@ PrefabInstance:
     - target: {fileID: 4238291930510445493, guid: 474d0d7f03a547743b41fa87340dc404,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetSceneID
+      value: LoadScene
       objectReference: {fileID: 0}
     - target: {fileID: 4238291930510445493, guid: 474d0d7f03a547743b41fa87340dc404,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4238291930510445493, guid: 474d0d7f03a547743b41fa87340dc404,
         type: 3}
@@ -1096,11 +1096,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -2378,11 +2378,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -2538,11 +2538,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -2785,7 +2785,7 @@ GameObject:
   - component: {fileID: 1644678487}
   m_Layer: 0
   m_Name: SceneManager
-  m_TagString: Untagged
+  m_TagString: SceneManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2802,8 +2802,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e5f772681122014b8f997fab9c245af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exData: {fileID: 0}
-  speed: 0
+  exData:
+  - {fileID: 11400000, guid: 02579e6b56270864a976de7044c0a553, type: 2}
+  - {fileID: 11400000, guid: aaae2dae2dcccb946b923f0d42b91d15, type: 2}
+  ex_id: 0
   isSitting: 0
   timeLimit: 0
 --- !u!114 &1644678488
@@ -3506,7 +3508,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2000594335}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -3972,7 +3974,7 @@ PrefabInstance:
     - target: {fileID: 2291952141382475879, guid: 9019bcd80bc9b544485bdd9cf1ffc9f1,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2291952141382475879, guid: 9019bcd80bc9b544485bdd9cf1ffc9f1,
         type: 3}
@@ -3997,7 +3999,7 @@ PrefabInstance:
     - target: {fileID: 2291952141382475879, guid: 9019bcd80bc9b544485bdd9cf1ffc9f1,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2291952141382475879, guid: 9019bcd80bc9b544485bdd9cf1ffc9f1,
         type: 3}

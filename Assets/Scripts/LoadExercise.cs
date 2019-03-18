@@ -9,16 +9,19 @@ public class LoadExercise : MonoBehaviour
     public GameObject sceneManager;
     private void Start()
     {
-        sceneManager = GameObject.FindGameObjectWithTag("SceneManager");
         StartExercise();
     }
     public void StartExercise()
     {
-        var index = sceneManager.GetComponent<SetExerciseData>().exData.exerciseID;
-        Debug.Log("Exercise ID to load");
-        if (index > 0)
+        sceneManager = GameObject.FindGameObjectWithTag("SceneManager");
+        if (sceneManager != null)
         {
-            Instantiate(exPrefabs[index-1]);
+            var index = sceneManager.GetComponent<SetExerciseData>().ex_id;
+            Debug.Log("Exercise ID to load");
+            if (index > 0)
+            {
+                Instantiate(exPrefabs[index - 1]);
+            }
         }
     }
 }
